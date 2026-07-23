@@ -844,6 +844,7 @@ h2 {
   }
   .page-shell {
     width: min(calc(100% - 28px), var(--max));
+    overflow-x: hidden;
   }
   .section {
     padding: 88px 0;
@@ -884,7 +885,7 @@ h2 {
   .experience-grid,
   .learning,
   .human-intro {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
   .human-intro > p:last-child {
     grid-column: auto;
@@ -903,6 +904,9 @@ h2 {
   }
   .human-grid {
     grid-template-columns: 1fr;
+  }
+  .timeline-top {
+    margin-bottom: 20px;
   }
 }
 @media (max-width: 600px) {
