@@ -23,19 +23,29 @@ document.querySelectorAll('.site-nav a').forEach(link => {
 })
 
 const header = document.querySelector('.site-header')
+const hero = document.querySelector('.hero')
 
-let lastScroll = 0
+if (header && hero) {
+  const updateHeader = () => {
+    const trigger = hero.offsetHeight * 0.25
+    const scrollPosition = window.scrollY
 
-addEventListener('scroll', () => {
-  const current = window.scrollY
+    header.classList.toggle(
+      'is-visible',
+      scrollPosition > trigger
+    )
 
-  if (current < 80) {
-    header.classList.remove('is-visible')
-  } else if (current > lastScroll) {
-    header.classList.add('is-visible')
-  } else {
-    header.classList.add('is-visible')
+    header.classList.toggle(
+      'is-scrolled',
+      scrollPosition > trigger + 60
+    )
   }
 
-  lastScroll = current
-})
+  window.addEventListener('scroll', updateHeader, {
+    passive: true
+  })
+
+  window.addEventListener('resize', updateHeader)
+
+  updateHeader()
+}

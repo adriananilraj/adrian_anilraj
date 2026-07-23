@@ -88,36 +88,51 @@ button {
   top: 24px;
   left: 50%;
   z-index: 1000;
+
   display: flex;
   width: min(calc(100% - 40px), var(--max));
   align-items: center;
   justify-content: space-between;
+
   padding: 12px 16px;
   border: 1px solid rgba(32, 30, 26, 0.08);
   border-radius: 999px;
+
   background: rgba(246, 242, 233, 0.82);
   box-shadow: 0 12px 45px rgba(0, 0, 0, 0.08);
+
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
-  transform: translate(-50%, -140%);
+
+  transform: translate3d(-50%, -35px, 0);
+
   transition:
-    transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
-    opacity 0.35s ease,
-    padding 0.3s ease,
-    box-shadow 0.3s ease;
+    opacity 450ms ease,
+    transform 550ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 550ms;
+
   -webkit-backdrop-filter: blur(18px);
   backdrop-filter: blur(18px);
+
+  will-change: opacity, transform;
 }
 
 .site-header.is-visible {
   opacity: 1;
+  visibility: visible;
   pointer-events: auto;
-  transform: translate(-50%, 0);
+
+  transform: translate3d(-50%, 0, 0);
+
+  transition:
+    opacity 450ms ease,
+    transform 550ms cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0s linear 0s;
 }
 
 .site-header.is-scrolled {
-  padding: 9px 14px;
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
 }
 .brand {
   display: flex;
@@ -1023,13 +1038,5 @@ h2 {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-    transition-delay: 0ms !important;
   }
 }
