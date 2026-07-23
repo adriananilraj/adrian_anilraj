@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta
     name="description"
-    content="Portfolio of Adrian Anilraj, a Software engineer based in Malaysia."
+    content="Portfolio of Adrian Anilraj, a software engineer based in Malaysia."
   >
-  <title>Adrian Anilraj —  Software Engineer</title>
+  <title>Adrian Anilraj — Software Engineer</title>
+  <meta name="theme-color" content="#f6f2e9">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -18,7 +20,7 @@
 </head>
 <body>
   <div class="page-shell">
-    <header class="site-header" data-reveal>
+    <header class="site-header">
       <a class="brand" href="#top" aria-label="Adrian Anilraj home">
         <span class="brand-mark">A</span>
         <span>Adrian Anilraj</span>
@@ -45,11 +47,11 @@
     <main id="top">
       <section class="hero section">
         <div class="hero-canvas-wrap" aria-hidden="true">
-          <canvas id="hero-canvas"></canvas>
+          <div class="hero-visual"></div>
           <div class="hero-canvas-vignette"></div>
         </div>
         <div class="hero-copy">
-          <p class="eyebrow hero-eyebrow" data-reveal>
+          <p class="eyebrow hero-eyebrow">
             Software engineer · Malaysia
           </p>
 
@@ -59,14 +61,14 @@
             <span class="title-line title-line-accent"><span>people can trust.</span></span>
           </h1>
 
-          <p class="hero-intro" data-reveal>
+          <p class="hero-intro">
             I’m Adrian, a Software engineer specialising in Nuxt,
             Vue, and TypeScript. I turn complex requirements into reliable,
             expressive web experiences—and connect them to the systems that
             make real products work.
           </p>
 
-          <div class="hero-actions" data-reveal>
+          <div class="hero-actions">
             <a class="button button-primary" href="#work">
               Explore the showcase
             </a>
@@ -76,7 +78,7 @@
           </div>
         </div>
 
-        <aside class="hero-note" data-reveal data-parallax="0.06">
+        <aside class="hero-note">
           <span class="note-label">Currently focused on</span>
           <p>
             Cloud-native development, Microsoft Azure, and stronger
@@ -98,7 +100,7 @@
         </aside>
       </section>
 
-      <section class="statement section" data-reveal>
+      <section class="statement section">
         <p>
           Good software should feel effortless on the surface—and remain
           dependable beneath it.
@@ -106,13 +108,13 @@
       </section>
 
       <section id="about" class="about section">
-        <div class="section-heading" data-reveal>
+        <div class="section-heading">
           <p class="eyebrow">About</p>
-          <h2 data-heading-motion>Engineering with clarity, care, and judgement.</h2>
+          <h2>Engineering with clarity, care, and judgement.</h2>
         </div>
 
         <div class="about-grid">
-          <div class="about-copy" data-reveal>
+          <div class="about-copy">
             <p>
               I’m a Software engineer based in Malaysia with
               experience creating enterprise web applications for teams and
@@ -131,7 +133,7 @@
             </p>
           </div>
 
-          <div class="principles" data-reveal>
+          <div class="principles">
             <article>
               <span>01</span>
               <h3>Make it understandable</h3>
@@ -161,13 +163,13 @@
       </section>
 
       <section id="work" class="work section">
-        <div class="section-heading" data-reveal>
+        <div class="section-heading">
           <p class="eyebrow">Website showcase</p>
-          <h2 data-heading-motion>Digital products shaped for different kinds of businesses.</h2>
+          <h2>Digital products shaped for different kinds of businesses.</h2>
         </div>
 
         <div class="project-list">
-          <article class="project-card project-featured" data-reveal data-tilt>
+          <article class="project-card project-featured">
             <div class="project-visual visual-medical" aria-hidden="true">
               <div class="browser medical-browser">
                 <div class="browser-bar">
@@ -210,7 +212,7 @@
             </div>
           </article>
 
-          <article class="project-card" data-reveal data-tilt>
+          <article class="project-card">
             <div class="project-visual visual-commerce" aria-hidden="true">
               <div class="commerce-window">
                 <div class="commerce-nav"></div>
@@ -250,7 +252,7 @@
             </div>
           </article>
 
-          <article class="project-card" data-reveal data-tilt>
+          <article class="project-card">
             <div class="project-visual visual-contact" aria-hidden="true">
               <div class="contact-window">
                 <div class="contact-window-copy">
@@ -288,7 +290,7 @@
             </div>
           </article>
 
-          <article class="project-card project-mini" data-reveal data-tilt>
+          <article class="project-card project-mini">
             <div class="project-visual visual-freelance" aria-hidden="true">
               <div class="freelance-orbit"></div>
               <div class="freelance-mark">Independent work</div>
@@ -311,9 +313,9 @@
       </section>
 
       <section id="human-layer" class="human-layer section">
-        <div class="human-intro" data-reveal>
+        <div class="human-intro">
           <p class="eyebrow">The human layer</p>
-          <h2 data-heading-motion>AI can generate screens. Engineering makes them dependable.</h2>
+          <h2>AI can generate screens. Engineering makes them dependable.</h2>
           <p>
             AI is already useful for exploration, scaffolding, and repetitive
             work. But production systems still depend on context, trade-offs,
@@ -323,7 +325,7 @@
         </div>
 
         <div class="human-grid">
-          <article data-reveal>
+          <article>
             <span>01</span>
             <h3>Server-side decisions</h3>
             <p>
@@ -331,7 +333,7 @@
               background jobs, and integrations require deliberate design.
             </p>
           </article>
-          <article data-reveal>
+          <article>
             <span>02</span>
             <h3>Storage and data</h3>
             <p>
@@ -339,7 +341,7 @@
               retained, backed up, migrated, and recovered safely.
             </p>
           </article>
-          <article data-reveal>
+          <article>
             <span>03</span>
             <h3>User identity and privacy</h3>
             <p>
@@ -347,7 +349,7 @@
               sensitive user data cannot be treated as visual details.
             </p>
           </article>
-          <article data-reveal>
+          <article>
             <span>04</span>
             <h3>Real-world judgement</h3>
             <p>
@@ -359,17 +361,17 @@
       </section>
 
       <section id="experience" class="experience section">
-        <div class="section-heading" data-reveal>
+        <div class="section-heading">
           <p class="eyebrow">Experience</p>
 
-          <h2 data-heading-motion>
+          <h2>
             Experience across development and training.
           </h2>
         </div>
 
         <div class="experience-rows">
           <div class="experience-grid">
-            <article class="timeline-card" data-reveal>
+            <article class="timeline-card">
               <div class="timeline-top">
                 <div>
                   <p class="timeline-company">
@@ -392,7 +394,7 @@
               </p>
             </article>
 
-            <div class="skills-card" data-reveal>
+            <div class="skills-card">
               <p class="eyebrow">Capabilities</p>
 
               <div class="skill-groups">
@@ -436,7 +438,7 @@
           </div>
 
           <div class="experience-grid">
-            <article class="timeline-card" data-reveal>
+            <article class="timeline-card">
               <div class="timeline-top">
                 <div>
                   <p class="timeline-company">
@@ -464,7 +466,7 @@
               </p>
             </article>
 
-            <div class="skills-card" data-reveal>
+            <div class="skills-card">
               <p class="eyebrow">Capabilities</p>
 
               <div class="skill-groups">
@@ -507,7 +509,7 @@
           </div>
 
           <div class="experience-grid">
-            <article class="timeline-card" data-reveal>
+            <article class="timeline-card">
               <div class="timeline-top">
                 <div>
                   <p class="timeline-company">
@@ -535,7 +537,7 @@
               </p>
             </article>
 
-            <div class="skills-card" data-reveal>
+            <div class="skills-card">
               <p class="eyebrow">Capabilities</p>
 
               <div class="skill-groups">
@@ -577,10 +579,10 @@
         </div>
       </section>
 
-      <section class="learning section" data-reveal>
+      <section class="learning section">
         <div>
           <p class="eyebrow">Growing beyond the interface</p>
-          <h2 data-heading-motion>Becoming a stronger cloud and product engineer.</h2>
+          <h2>Becoming a stronger cloud and product engineer.</h2>
         </div>
         <p>
           I’m deepening my understanding of Microsoft Azure, identity,
@@ -589,9 +591,9 @@
         </p>
       </section>
 
-      <section id="contact" class="contact section" data-reveal>
+      <section id="contact" class="contact section">
         <p class="eyebrow">Contact</p>
-        <h2 data-heading-motion>Need a product that looks good and works properly?</h2>
+        <h2>Need a product that looks good and works properly?</h2>
         <p>
           I’m interested in frontend, full-stack, and cloud-focused
           opportunities where quality, collaboration, and user experience
@@ -611,17 +613,6 @@
     </footer>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-  <script type="importmap">
-  {
-    "imports": {
-      "three": "https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js",
-      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"
-    }
-  }
-  </script>
-
-  <script type="module" src="./script.js"></script>
+  <script src="./script.js" defer></script>
 </body>
 </html>
