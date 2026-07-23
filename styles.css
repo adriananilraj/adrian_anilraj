@@ -893,7 +893,6 @@ h2 {
     grid-template-columns: 1fr;
   }
   .human-layer {
-    margin-inline: -14px;
     padding: 58px 26px;
   }
   .contact {
