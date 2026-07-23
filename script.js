@@ -21,3 +21,21 @@ document.querySelectorAll('.site-nav a').forEach(link => {
     nav?.classList.remove('is-open')
   })
 })
+
+const header = document.querySelector('.site-header')
+
+let lastScroll = 0
+
+addEventListener('scroll', () => {
+  const current = window.scrollY
+
+  if (current < 80) {
+    header.classList.remove('is-visible')
+  } else if (current > lastScroll) {
+    header.classList.add('is-visible')
+  } else {
+    header.classList.add('is-visible')
+  }
+
+  lastScroll = current
+})
